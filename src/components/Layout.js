@@ -8,7 +8,7 @@ function Layout() {
       <nav className='navbar'>
         <NavLink className='links' to='/'>Home</NavLink>
         <NavLink className='links' to='/create'>Create Blog</NavLink>
-        <NavLink className='links' to='/Blogs'>Blogs</NavLink>
+        
       </nav>
       <Outlet />
     </>

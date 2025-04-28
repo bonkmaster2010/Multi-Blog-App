@@ -3,48 +3,66 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: #f4f7fc;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 650px;
+  margin: 40px auto;
+  background: linear-gradient(145deg, #ffffff, #f0f4f8);
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.blog-form h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.blog-form h3 {
+  font-size: 1.5rem;
+  color: #34495e;
+  margin-bottom: 10px;
 }
 
 .main-form-content, .extra-form-content {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
-.blog-form input, .blog-form textarea {
+.blog-form input, 
+.blog-form textarea {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
+  padding: 12px 15px;
+  margin-top: 10px;
+  border: 1px solid #dfe6ed;
+  border-radius: 8px;
+  background-color: #fbfcfd;
+  font-size: 1rem;
   box-sizing: border-box;
   transition: all 0.3s ease;
+  color: #333;
 }
 
-.blog-form input:focus, .blog-form textarea:focus {
+.blog-form input:focus, 
+.blog-form textarea:focus {
   outline: none;
-  border-color: #4A90E2;
-  box-shadow: 0 0 5px rgba(74, 144, 226, 0.6);
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.25);
 }
 
 .blog-form textarea {
   resize: vertical;
-  min-height: 150px;
-  max-width: 570px;
+  min-height: 160px;
+  max-width: 620px;
 }
 
 .rowing, .rowing2 {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
   width: 100%;
 }
 
@@ -54,99 +72,117 @@
 
 .rowing button, .rowing2 button {
   white-space: nowrap;
+  background-color: #27ae60;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.rowing button:hover, .rowing2 button:hover {
+  background-color: #1e8449;
+  transform: translateY(-2px);
 }
 
 .form-btns {
   display: flex;
   justify-content: space-between;
-  gap: 15px;
+  gap: 20px;
   width: 100%;
 }
 
+.tags-cont, .cate-cont {
+  display: flex;
+  gap: 15px; 
+  height: 70px;
+}
+
+.cate-cont{
+  margin-bottom: 20px;
+}
+
 .blog-form button {
-  padding: 12px 20px;
-  background-color: #4A90E2;
-  color: white;
+  padding: 12px 25px;
+  background-color: #3498db;
+  color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
 }
 
 .blog-form button:hover {
-  background-color: #357ABD;
+  background-color: #2980b9;
+  transform: scale(1.03);
 }
 
 .blog-form button:disabled {
-  background-color: #ccc;
+  background-color: #bdc3c7;
   cursor: not-allowed;
 }
 
-.blog-form h1 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.blog-form h3 {
-  color: #333;
-  font-size: 1.4rem;
-  margin-bottom: 10px;
-}
-
-#no-blogs {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #999;
-}
-
-.blog-form input::placeholder, .blog-form textarea::placeholder {
+.blog-form input::placeholder, 
+.blog-form textarea::placeholder {
   color: #aaa;
   font-style: italic;
 }
 
+.add {
+  margin: 15px auto;
+  display: block;
+}
+
 #title, #content {
   font-weight: bold;
+  color: #2c3e50;
 }
 
-/* ✅ FIXED: Proper alignment for the "Add" button */
-.add {
-  margin: 10px auto; 
-  display: block;
-}
-
-/* ✅ FIXED: Responsive and properly styled tags & categories */
 .tag, .cate {
   max-width: 100%;
-  width: 300px;
-  padding: 5px 10px;
-  background-color: #e3e7f1;
-  color: #333;
-  border-radius: 4px;
+  width: 320px;
+  padding: 8px 15px;
+  background-color: #ecf0f1;
+  color: #34495e;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 8px auto;
   text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  margin: 5px auto;
-  display: block;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-@media (max-width: 768px) {
-  .blog-form {
-    padding: 15px;
-  }
-
-  .rowing, .rowing2 {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .form-btns {
-    flex-direction: column;
-    gap: 10px;
-  }
+#no-blogs {
+  font-size: 1.3rem;
+  text-align: center;
+  color: #e74c3c;
+  font-weight: 600;
+  margin-top: 50px;
 }
 
 #hidden {
   display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blog-form {
+    padding: 20px;
+  }
+
+  .rowing, .rowing2, .form-btns {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }

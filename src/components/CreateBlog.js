@@ -31,10 +31,8 @@ function Create() {
       return;
     }
 
-    // Get existing blogs from localStorage
     const existingBlogs = JSON.parse(localStorage.getItem("blogs")) || [];
 
-    // Create new blog entry
     const newBlog = {
       title,
       content,
@@ -43,10 +41,9 @@ function Create() {
       createdAt: new Date().toISOString(),
     };
 
-    // Save updated blogs list to localStorage
     localStorage.setItem("blogs", JSON.stringify([...existingBlogs, newBlog]));
 
-    navigate("/blogs"); // Navigate to blogs page
+    navigate("/"); 
   };
 
   return (
@@ -62,23 +59,25 @@ function Create() {
         value={content}
         onChange={(e) => setContent(e.target.value)}
       />
-      <div>
+
+      <div className="tags-cont">
         <input
           className="tag"
           placeholder="Tags"
           value={newTag}
           onChange={(e) => setNewTag(e.target.value)}
         />
-        <button className="add" onClick={addTag}>Add Tag</button>
+        <button className="add" onClick={addTag}>Add</button>
       </div>
-      <div>
+
+      <div className="cate-cont">
         <input
           className="cate"
           placeholder="Categories"
           value={newCategory}
           onChange={(e) => setNewCategory(e.target.value)}
         />
-        <button className="add" onClick={addCategory}>Add Category</button>
+        <button className="add" onClick={addCategory}>Add</button>
       </div>
       <button onClick={handlePublish}>Publish</button>
     </div>

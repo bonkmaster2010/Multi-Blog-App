@@ -1,0 +1,71 @@
+/* Peak Color Theme and Clean Design */
+.blog-details {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9ff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .blog-title {
+    color: #6c63ff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .blog-content {
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .meta-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .meta-box {
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .meta-title {
+    font-size: 1.2rem;
+    color: #6c63ff;
+    margin-bottom: 10px;
+  }
+  
+  .meta-item {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .tag {
+    background-color: #6c63ff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .loading {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 2rem;
+    color: #6c63ff;
+  }
+  
