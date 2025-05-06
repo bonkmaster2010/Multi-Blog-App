@@ -1,71 +1,166 @@
-/* Peak Color Theme and Clean Design */
+/* Modern Blog Details Design */
 .blog-details {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #f9f9ff;
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: linear-gradient(145deg, #ffffff, #f8f7ff);
+  border-radius: 18px;
+  box-shadow: 
+    0px 6px 30px rgba(101, 88, 245, 0.08),
+    0px 1px 2px rgba(0, 0, 0, 0.03);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  border: 1px solid rgba(101, 88, 245, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-details::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #6558f5, #9d4edd);
+}
+
+.blog-title {
+  color: #2a254b;
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.blog-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, #6558f5, #9d4edd);
+  border-radius: 2px;
+}
+
+.blog-content {
+  color: #2a254b;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+.blog-content p {
+  margin-bottom: 1.5rem;
+}
+
+.meta-container {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.meta-box {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(101, 88, 245, 0.05);
+  flex: 1;
+  min-width: 220px;
+  border: 1px solid rgba(101, 88, 245, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meta-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 25px rgba(101, 88, 245, 0.1);
+}
+
+.meta-title {
+  font-size: 1.1rem;
+  color: #6558f5;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.meta-title svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.meta-item {
+  font-size: 1rem;
+  color: #4e4d59;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.tag {
+  background: linear-gradient(to right, #6558f5, #7e4ed8);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: 0px 2px 8px rgba(101, 88, 245, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.tag:hover {
+  transform: translateY(-2px);
+}
+
+.loading {
+  text-align: center;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(101, 88, 245, 0.1);
+  border-top-color: #6558f5;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-details {
+    padding: 1.5rem;
+    margin: 1.5rem;
     border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
   }
   
   .blog-title {
-    color: #6c63ff;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .blog-content {
-    color: #333;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
-  }
-  
-  .meta-container {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
+    font-size: 2rem;
   }
   
   .meta-box {
-    background-color: #fff;
-    padding: 15px 20px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
-    flex: 1;
-    min-width: 200px;
+    min-width: 100%;
   }
-  
-  .meta-title {
-    font-size: 1.2rem;
-    color: #6c63ff;
-    margin-bottom: 10px;
-  }
-  
-  .meta-item {
-    font-size: 1rem;
-    color: #666;
-  }
-  
-  .tags-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .tag {
-    background-color: #6c63ff;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-  }
-  
-  .loading {
-    text-align: center;
-    margin-top: 100px;
-    font-size: 2rem;
-    color: #6c63ff;
-  }
-  
+}
